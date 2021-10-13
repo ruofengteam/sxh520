@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <van-row type="flex" justify="space-around">
-      <van-col span="6">
-        <van-image
-          round
-          width="4.5rem"
-          height="4.5rem"
-          src="https://img01.yzcdn.cn/vant/cat.jpeg"
-        />
-      </van-col>
-      <van-col span="6">span: 6</van-col>
-      <van-col span="6">span: 6</van-col>
-    </van-row>
+    
+    <van-row class="row">
+  <van-col span="3.2">
+    <van-image
+      round
+      width="5.2rem"
+      height="5.2rem"
+      src="https://img.yzcdn.cn/vant/cat.jpeg"
+    />
+  </van-col>
+  <van-col span="10" >
+      <div class="up">姓名:某某</div>
+      <div class="down"><van-tag type="primary" size="large">标签</van-tag></div>
+  </van-col>
+  <van-col span="8">span: 8</van-col>
+</van-row>
     <van-goods-action>
       <van-goods-action-icon icon="chat-o" >
         客服
@@ -30,6 +34,7 @@
   <van-cell title="单元格" value="内容" />
   <van-cell title="单元格" value="内容" label="描述信息" />
 </van-cell-group>
+
   </div>
 </template>
 
@@ -37,9 +42,10 @@
 import { GoodsAction,
   GoodsActionIcon,
   GoodsActionButton ,
-  Cell, CellGroup} from 'vant';
+  Cell, CellGroup,Tag, Button} from 'vant';
   import { Col, Row } from 'vant';
   import { Image as VanImage } from 'vant';
+  
 
 
 export default {
@@ -52,8 +58,16 @@ export default {
     [Cell.name]: Cell,
     [Col.name]: Col,
     [Row.name]: Row,
-    [VanImage.name]: VanImage
-  }
+    [VanImage.name]: VanImage,
+    [Tag.name]: Tag,
+    [Button.name]: Button,
+    
+  },
+  data () {
+    return {
+      
+    }
+  },
 }
 </script>
 
@@ -70,5 +84,20 @@ body {
   font-size: 16px;
   background-color: #f8f8f8;
   -webkit-font-smoothing: antialiased;
+}
+.row{
+  height: 5.2rem;
+}
+.up {
+ width: 8rem;
+ height: 3rem;
+ font-size: 1.2rem;
+ text-align: left;
+}
+.down {
+  width: 8rem;
+  height: 2rem;
+  position: absolute;
+   text-align: left;
 }
 </style>
