@@ -2,7 +2,7 @@
   <div id="app">
     
     <van-row class="row">
-  <van-col span="3.2">
+  <van-col span="5">
     <van-image
       round
       width="5.2rem"
@@ -10,11 +10,14 @@
       src="https://img.yzcdn.cn/vant/cat.jpeg"
     />
   </van-col>
-  <van-col span="10" >
-      <div class="up">姓名:某某</div>
-      <div class="down"><van-tag type="primary" size="large">标签</van-tag></div>
+  <van-col span="10" offset="1" >
+      <div class="up">某某</div>
+      <div class="down"><van-tag type="primary" size="large" plain>绑定手机号</van-tag></div>
   </van-col>
-  <van-col span="8">span: 8</van-col>
+  <van-col span="6">
+    <div class="up2">邀请海报</div>
+    <div class="down2"><van-tag type="danger" size="medium" plain>赚积分</van-tag></div>
+  </van-col>
 </van-row>
     <van-goods-action>
       <van-goods-action-icon icon="chat-o" >
@@ -90,14 +93,30 @@ body {
 }
 .up {
  width: 8rem;
- height: 3rem;
- font-size: 1.2rem;
+ height: 2rem;
+ margin-top: 0.8rem;
+ font-size: 1.3rem;
  text-align: left;
+}
+.up2 {
+ width: 7rem;
+ height: 2rem;
+ margin-top: 0.8rem;
+ font-size: 1.1rem;
+ text-align: right;
 }
 .down {
   width: 8rem;
   height: 2rem;
   position: absolute;
-   text-align: left;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.down2 {
+  width: 6rem;
+  height: 2rem;
+  position: absolute;
+  margin-bottom: 0.5rem;
+  text-align: right;
 }
 </style>
